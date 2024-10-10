@@ -521,9 +521,9 @@ export const MyBots = observer(() => {
                 <Text id="app.settings.pages.bots.create_bot" />
             </CategoryButton>
             <h5>
-                By creating a bot, you are agreeing to the {` `}
+                Создавая бота, вы соглашаетесь с {` `}
                 <a
-                    href="https://revolt.chat/aup"
+                    href="https://tandemchat.ru/aup"
                     target="_blank"
                     rel="noreferrer">
                     Acceptable Usage Policy

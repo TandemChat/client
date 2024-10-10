@@ -39,7 +39,7 @@ export function OnboardingModal({
         <div className={styles.onboarding}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1>{"Welcome to Revolt."}</h1>
+                    <h1>{"Добро пожаловать в Tandem."}</h1>
                 </div>
                 <div className={styles.form}>
                     {loading ? (
@@ -47,14 +47,14 @@ export function OnboardingModal({
                     ) : (
                         <>
                             <p>
-                                {"It's time to choose a username."}
+                                {"Время выбрать имя пользователя!"}
                                 <br />
                                 {
-                                    "Others will be able to find, recognise and mention you with this name, so choose wisely."
+                                    "Люди смогут найти, опознать и упомянуть Вас с этим именем, так что выбирайте с умом."
                                 }
                                 <br />
                                 {
-                                    "You can change it at any time in your User Settings."
+                                    "Вы можете его всегда изменить в Настройках."
                                 }
                             </p>
                             <form
@@ -72,11 +72,11 @@ export function OnboardingModal({
                                     />
                                 </div>
                                 <p>
-                                    You will be automatically assigned a number
-                                    tag which you can find from settings.
+                                    Вам автоматически будет присвоен тег-число,
+                                    его вы можете найти в настроках.
                                 </p>
                                 <Button palette="accent">
-                                    {"Looks good!"}
+                                    {"Выглядит неплохо!"}
                                 </Button>
                             </form>
                         </>

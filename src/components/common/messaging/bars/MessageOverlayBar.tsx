@@ -109,7 +109,7 @@ export const MessageOverlayBar = observer(
         return (
             <OverlayBar>
                 {message.channel?.havePermission("SendMessage") && (
-                    <Tooltip content="Reply">
+                    <Tooltip content="Ответить">
                         <Entry
                             onClick={() =>
                                 internalEmit("ReplyBar", "add", message)
@@ -124,7 +124,7 @@ export const MessageOverlayBar = observer(
                         open={reactionsOpen}
                         setOpen={setReactionsOpen}
                         message={message}>
-                        <Tooltip content="React">
+                        <Tooltip content="Реакции">
                             <Entry>
                                 <HappyBeaming size={18} />
                             </Entry>
@@ -133,7 +133,7 @@ export const MessageOverlayBar = observer(
                 )}
 
                 {isAuthor && (
-                    <Tooltip content="Edit">
+                    <Tooltip content="Редактировать">
                         <Entry
                             onClick={() =>
                                 internalEmit(
@@ -149,7 +149,7 @@ export const MessageOverlayBar = observer(
                 {isAuthor ||
                 (message.channel &&
                     message.channel.havePermission("ManageMessages")) ? (
-                    <Tooltip content="Delete">
+                    <Tooltip content="Удалить">
                         <Entry
                             onClick={(e) =>
                                 e.shiftKey
@@ -163,7 +163,7 @@ export const MessageOverlayBar = observer(
                         </Entry>
                     </Tooltip>
                 ) : undefined}
-                <Tooltip content="More">
+                <Tooltip content="Больше">
                     <Entry
                         onClick={() =>
                             openContextMenu("Menu", {
@@ -178,7 +178,7 @@ export const MessageOverlayBar = observer(
                 {extraActions && (
                     <>
                         <Divider />
-                        <Tooltip content="Mark as Unread">
+                        <Tooltip content="Пометить как прочитанное">
                             <Entry
                                 onClick={() => {
                                     // ! FIXME: deduplicate this code with ctx menu
@@ -206,7 +206,7 @@ export const MessageOverlayBar = observer(
                         </Tooltip>
                         <Tooltip
                             content={
-                                copied === "link" ? "Copied!" : "Copy Link"
+                                copied === "link" ? "Скопировано!" : "Скопировать ссылку"
                             }
                             hideOnClick={false}>
                             <Entry
@@ -218,7 +218,7 @@ export const MessageOverlayBar = observer(
                             </Entry>
                         </Tooltip>
                         <Tooltip
-                            content={copied === "id" ? "Copied!" : "Copy ID"}
+                            content={copied === "id" ? "Скопировано!" : "Скопировать ID"}
                             hideOnClick={false}>
                             <Entry
                                 onClick={() => {

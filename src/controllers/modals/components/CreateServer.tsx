@@ -23,9 +23,9 @@ export default function CreateServer({
             title={<Text id="app.main.servers.create" />}
             description={
                 <div>
-                    By creating this server, you agree to the{" "}
+                    Создавая сервер, вы соглашаетесь с {" "}
                     <a
-                        href="https://revolt.chat/aup"
+                        href="https://tandemchat.ru/aup"
                         target="_blank"
                         rel="noreferrer">
                         Acceptable Use Policy.
