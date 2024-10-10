@@ -78,17 +78,17 @@ export default function ErrorBoundary({ children, section }: Props) {
             <CrashContainer>
                 {section === "client" ? (
                     <>
-                        <h3>Client Crash Report</h3>
+                        <h3>Краш-репорт клиента</h3>
                         <Button onClick={ignoreError}>
-                            Ignore error and try to reload app
+                            Игнор ошибки
                         </Button>
                         <div class="buttonDivider" />
                         <Button onClick={() => location.reload()}>
-                            Refresh page
+                            Обновить страницу
                         </Button>
                         <div class="buttonDivider" />
                         <Button palette="error" onClick={reset}>
-                            {confirm ? "Are you sure?" : "Reset all app data"}
+                            {confirm ? "Уверены?" : "Сбросить данные приложения"}
                         </Button>
                     </>
                 ) : (
@@ -101,11 +101,11 @@ export default function ErrorBoundary({ children, section }: Props) {
                 )}
                 <br />
                 <br />
-                <div>Revolt has crashed. Here's the error:</div>
+                <div>Tandem крашнулся, вот ошибка:</div>
                 <pre>
                     <code>{error?.stack}</code>
                 </pre>
-                <div>This error has been automatically reported.</div>
+                <div>Репорт об ошибке уже составлен.</div>
             </CrashContainer>
         );
     }

@@ -96,7 +96,7 @@ export default observer(() => {
                     {/*</div>*/}
                     <div className={styles.bottom}>
                         <div className={styles.links}>
-                            <div className={styles.socials}>
+                            {/* <div className={styles.socials}>
                                 <a
                                     href="https://github.com/revoltchat"
                                     target="_blank"
@@ -116,22 +116,16 @@ export default observer(() => {
                                     <Mastodon size={24} />
                                 </a>
                             </div>
-                            <div className={styles.bullet} />
+                            <div className={styles.bullet} /> */}
                             <div className={styles.revolt}>
                                 <a
-                                    href="https://revolt.chat/about"
-                                    target="_blank"
-                                    rel="noreferrer">
-                                    <Text id="general.about" />
-                                </a>
-                                <a
-                                    href="https://revolt.chat/terms"
+                                    href="https://tandemchat.ru/terms"
                                     target="_blank"
                                     rel="noreferrer">
                                     <Text id="general.tos" />
                                 </a>
                                 <a
-                                    href="https://revolt.chat/privacy"
+                                    href="https://tandemchat.ru/privacy"
                                     target="_blank"
                                     rel="noreferrer">
                                     <Text id="general.privacy" />

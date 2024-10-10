@@ -28,16 +28,16 @@ export default function ConfirmDelete() {
             description={
                 deleted ? (
                     <>
-                        Your account will be deleted in 7 days.
+                        Ваш аккаунт будет удалён через 7 дней.
                         <br />
-                        You may contact{" "}
-                        <a href="mailto:contact@revolt.chat">
-                            Revolt support
+                        Вы можете связаться с{" "}
+                        <a href="mailto:team@tandemchat.ru">
+                            Tamdem-support
                         </a>{" "}
-                        to cancel the request if you wish.
+                        для отмены запроса.
                     </>
                 ) : (
-                    "Contacting the server."
+                    "Соединение с сервером."
                 )
             }
             nonDismissable>

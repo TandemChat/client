@@ -202,7 +202,7 @@ export default observer(() => {
                 },
                 {
                     divider: true,
-                    category: "revolt",
+                    category: "tandem",
                     id: "bots",
                     icon: <Bot size={20} />,
                     title: <Text id="app.settings.pages.bots.title" />,
@@ -271,7 +271,7 @@ export default observer(() => {
                         <ListUl size={20} />
                         <Text id="app.special.modals.changelogs.title" />
                     </ButtonItem>
-                    <a
+                    {/* <a
                         href="https://github.com/revoltchat"
                         target="_blank"
                         rel="noreferrer">
@@ -288,7 +288,7 @@ export default observer(() => {
                             <Coffee size={20} />
                             <Text id="app.settings.pages.donate.title" />
                         </ButtonItem>
-                    </a>
+                    </a> */}
                     <LineDivider compact />
                     <ButtonItem
                         onClick={clientController.logoutCurrent}
@@ -309,7 +309,7 @@ export default observer(() => {
                             <a
                                 href={
                                     GIT_BRANCH !== "DETACHED"
-                                        ? `https://github.com/revoltchat/revite/tree/${GIT_BRANCH}`
+                                        ? `https://github.com/TandemChat/client/tree/${GIT_BRANCH}`
                                         : undefined
                                 }
                                 target="_blank"

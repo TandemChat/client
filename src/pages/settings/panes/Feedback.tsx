@@ -10,7 +10,7 @@ import { CategoryButton, Column, Tip } from "@revoltchat/ui";
 export function Feedback() {
     return (
         <Column>
-            <Tip palette="warning">
+            {/* <Tip palette="warning">
                 <span>
                     We are currently rebuilding the client from scratch. You can{" "}
                     <a
@@ -23,9 +23,9 @@ export function Feedback() {
                     ; in the meantime, we are only accepting and fixing critical
                     bugs with the current client.
                 </span>
-            </Tip>
+            </Tip> */}
             <div className={styles.feedback}>
-                <a
+                {/* <a
                     href="https://github.com/revoltchat/revolt/discussions"
                     target="_blank"
                     rel="noreferrer">
@@ -63,14 +63,14 @@ export function Feedback() {
                         }>
                         <Text id="app.settings.pages.feedback.bug" />
                     </CategoryButton>
-                </a>
+                </a> */}
                 <Link to="/invite/Testers">
                     <a>
                         <CategoryButton
                             action="chevron"
                             icon={<Group size={24} />}
-                            description="You can report issues and discuss improvements with us directly here.">
-                            {"Join the Revolt Lounge"}
+                            description="Вы можете сообщить о проблемах и обсудить усовершенствования с нами непосредственно здесь.">
+                            {"Заходите в Tandem Lounge"}
                         </CategoryButton>
                     </a>
                 </Link>

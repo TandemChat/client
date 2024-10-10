@@ -125,7 +125,7 @@ export default observer(() => {
                                     <Text id="app.home.group" />
                                 </CategoryButton>
                             </a>
-                            <Link to="/discover">
+                            {/* <Link to="/discover">
                                 <a>
                                     <CategoryButton
                                         action="chevron"
@@ -136,12 +136,12 @@ export default observer(() => {
                                         <Text id="app.home.discover" />
                                     </CategoryButton>
                                 </a>
-                            </Link>
+                            </Link> */}
 
                             {client.servers.get(
-                                "01F7ZSBSFHQ8TA81725KQCSDDP",
+                                "01J9V31VKGSQPB41KND4XD0WST",
                             ) ? (
-                                <Link to="/server/01F7ZSBSFHQ8TA81725KQCSDDP">
+                                <Link to="/server/01J9V31VKGSQPB41KND4XD0WST">
                                     <CategoryButton
                                         action="chevron"
                                         icon={<RightArrowCircle size={32} />}
@@ -174,7 +174,7 @@ export default observer(() => {
                                     <Text id="app.home.feedback" />
                                 </CategoryButton>
                             </Link>
-                            <a
+                            {/* <a
                                 href="https://insrt.uk/donate"
                                 target="_blank"
                                 rel="noreferrer">
@@ -186,7 +186,7 @@ export default observer(() => {
                                     icon={<Money size={32} />}>
                                     <Text id="app.home.donate" />
                                 </CategoryButton>
-                            </a>
+                            </a> */}
                             <Link to="/settings">
                                 <CategoryButton
                                     action="chevron"
