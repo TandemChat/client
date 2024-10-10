@@ -75,6 +75,11 @@ jobs:
     publish:
         #needs: [test]
         runs-on: ubuntu-latest
+        permissions:
+          contents: write # Allow actions to create release
+          packages: write # Allow pushing images to GHCR
+          attestations: write # To create and write attestations
+          id-token: write # Additional permissions for the persistence of the attestations
         if: github.event_name != 'pull_request'
         steps:
             - name: Checkout
@@ -92,18 +97,30 @@ jobs:
                   key: ${{ runner.os }}-buildx-linux/amd64-${{ github.sha }}
              # Login against a Docker registry except on PR
           # https://github.com/docker/login-action
-            - name: Log into registry ${{ env.REGISTRY }}
-              if: github.event_name != 'pull_request'
-              uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
-              with:
-                registry: ${{ env.REGISTRY }}
-                username: ${{ github.actor }}
-                password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate image name
+              run: |
+                  REPO_OWNER_LOWERCASE="$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')"
+                  echo "REPO_OWNER_LOWERCASE=$REPO_OWNER_LOWERCASE" >> "$GITHUB_ENV"
+                  echo "IMAGE_URL=ghcr.io/$REPO_OWNER_LOWERCASE/client" >> "$GITHUB_ENV"
             - name: Docker meta
-              id: meta
-              uses: docker/metadata-action@v3
+              id: docker_meta
+              uses: docker/metadata-action@v5
               with:
-                  images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+                images: |
+                  ${{ env. IMAGE_URL }}
+                tags: |
+                  type=semver,pattern={{version}}
+                  type=semver,pattern={{major}}.{{minor}}
+                  type=semver,pattern={{raw}}
+                  type=semver,pattern=v{{major}}
+                  type=ref,event=branch
+            - name: Login to GitHub Package Registry
+              uses: docker/login-action@v3
+              if: ${{ github.event_name != 'pull_request' }}
+              with:
+                registry: ghcr.io
+                username: ${{ github.repository_owner }}
+                password: ${{ secrets.GITHUB_TOKEN }}
             - name: Build and publish
               uses: docker/build-push-action@v2
               with:
@@ -114,6 +131,7 @@ jobs:
                   labels: ${{ steps.meta.outputs.labels }}
                   cache-from: type=local,src=/tmp/.buildx-cache/linux/amd64
                   cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+                  provenance: false
             - name: Move cache
               run: |
                   rm -rf /tmp/.buildx-cache
