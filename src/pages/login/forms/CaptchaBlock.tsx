@@ -28,7 +28,7 @@ export const CaptchaBlock = observer((props: CaptchaProps) => {
 
     return (
         <div className={styles.captcha}>
-            <div className={styles.title}>Are you human?</div>
+            <div className={styles.title}>Вы человек?</div>
             <div className={styles.checkbox}>
                 <HCaptcha
                     theme="dark"
