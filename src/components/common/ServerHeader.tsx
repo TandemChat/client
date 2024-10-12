@@ -90,7 +90,14 @@ export default observer(({ server }: Props) => {
                                 height="20"
                                 width="20"
                             />
-                            <image
+                            <foreignObject x="2" y="2" width="15" height="15">
+                                <Check
+                                    size={15}
+                                    color="black"
+                                    strokeWidth={8}
+                                />
+                            </foreignObject>
+                            {/* <image
                                 xlinkHref="/assets/badges/revolt_r.svg"
                                 height="15"
                                 width="15"
@@ -99,7 +106,7 @@ export default observer(({ server }: Props) => {
                                 style={
                                     "justify-content: center; align-items: center; filter: brightness(0);"
                                 }
-                            />
+                            /> */}
                         </svg>
                     </Tooltip>
                 ) : undefined}
