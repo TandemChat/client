@@ -41,12 +41,12 @@ export default class Unreads {
         runInAction(() => {
             this.loaded = true;
             for (const unread of unreads) {
-                var { _id, ...data } = unread;
+                const { _id, ...data } = unread;
                 // For somereason backend gives us an Mention event if last_id is that message. We already readed it.
                 if (data.mentions?.includes(data.last_id ?? '')) {
                     const index = data.mentions.indexOf(data.last_id ?? '', 0);
                     if (index > -1) {
-                        data.mentions = data.mentions.splice(index, 1);
+                        data.mentions.splice(index, 1);
                     }
                 }
                 this.channels.set(_id.channel, data);
