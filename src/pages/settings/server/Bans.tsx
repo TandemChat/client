@@ -90,7 +90,7 @@ export const Bans = observer(({ server }: Props) => {
     return (
         <div className={styles.userList}>
             <InputBox
-                placeholder="Search for a specific user..."
+                placeholder="Поиск конкретного пользователя..."
                 value={query}
                 onChange={(e) => setQuery(e.currentTarget.value)}
                 palette="secondary"

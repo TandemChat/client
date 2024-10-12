@@ -124,12 +124,12 @@ export const Members = ({ server }: Props) => {
     return (
         <div className={styles.userList}>
             <InputBox
-                placeholder="Search for a specific user..."
+                placeholder="Поиск конкретного пользователя..."
                 value={query}
                 onChange={(e) => setQuery(e.currentTarget.value)}
                 palette="secondary"
             />
-            <div className={styles.subtitle}>{data?.length ?? 0} Members</div>
+            <div className={styles.subtitle}>{data?.length ?? 0} участников</div>
             {members ? (
                 <div className={styles.virtual}>
                     <Virtuoso

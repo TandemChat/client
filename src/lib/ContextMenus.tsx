@@ -135,13 +135,13 @@ export default function ContextMenus() {
                     break;
                 case "admin":
                     window.open(
-                        `https://admin.tandemchat.ru/panel/inspect/${data.type}/${data.id}`,
+                        `https://admin.rus-land.fun/panel/inspect/${data.type}/${data.id}`,
                         "_blank",
                     );
                     break;
                 case "admin_system":
                     window.open(
-                        `https://admin.tandemchat.ru/panel/inspect/user/${data.id}`,
+                        `https://admin.rus-land.fun/panel/inspect/user/${data.id}`,
                         "_blank",
                     );
                     break;

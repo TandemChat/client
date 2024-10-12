@@ -99,14 +99,14 @@ export const RoleList = observer(
                     <ButtonItem
                         selected={"default" === selected}
                         onClick={() => onSelect?.("default")}>
-                        Default
+                        @everyone
                     </ButtonItem>
                 )}
                 {onCreateRole && (
                     <Button
                         palette="plain-secondary"
                         onClick={() => onCreateRole(onSelect)}>
-                        Create Role
+                        Создать роль
                     </Button>
                 )}
             </Base>

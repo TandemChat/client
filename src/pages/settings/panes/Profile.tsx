@@ -80,7 +80,7 @@ export const Profile = observer(() => {
                 />
             </div>
             <div className={styles.titleNew}>
-                Display Name
+                Отображаемое имя
                 <div className={styles.new}>NEW</div>
             </div>
             <CategoryButton
@@ -89,8 +89,8 @@ export const Profile = observer(() => {
                 }
                 icon={<UserCircle size={24} />}
                 action="chevron"
-                description={"Change your display name to whatever you like"}>
-                Display Name
+                description={"Измените свое отображаемое имя на то, которое вам нравится"}>
+                Отображаемое имя
             </CategoryButton>
             {/*<h3>Badges</h3>
             <div className={styles.badgePicker}>
@@ -217,9 +217,9 @@ export const Profile = observer(() => {
             <LineDivider />
             <Tip>
                 <span>
-                    Want to change your username?{" "}
+                    Хотите изменить свое имя пользователя?{" "}
                     <a onClick={() => switchPage("account")}>
-                        Head over to your account settings.
+                        Зайдите в настройки своей учетной записи.
                     </a>
                 </span>
             </Tip>

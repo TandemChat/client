@@ -241,7 +241,7 @@ export function Sessions() {
                 icon={<LogOut size={24} color={"var(--error)"} />}
                 action={"chevron"}
                 description={
-                    "Logs you out of all sessions except this device."
+                    "Отключает все сессии, кроме этого устройства."
                 }>
                 <Text id="app.settings.pages.sessions.logout" />
             </CategoryButton>
