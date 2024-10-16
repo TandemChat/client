@@ -35,7 +35,7 @@ export default function ServerInfo({
                         });
                         return true;
                     },
-                    children: "Редактировать профиль",
+                    children: "Профиль",
                     palette: "primary",
                 },
                 {
