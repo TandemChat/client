@@ -35,8 +35,19 @@ export default function ServerInfo({
                         });
                         return true;
                     },
-                    children: "Edit Identity",
+                    children: "Редактировать профиль",
                     palette: "primary",
+                },
+                {
+                    onClick: () => {
+                        modalController.push({
+                            type: "leave_server",
+                            target: server,
+                        });
+                        return true;
+                    },
+                    children: "Покинуть сервер",
+                    palette: "error",
                 },
                 {
                     onClick: () => {
