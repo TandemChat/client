@@ -91,7 +91,7 @@ export default function InviteBot() {
                 padding: "6em",
                 overflowY: "auto",
             }}>
-            <Tip palette="warning">This section is under construction.</Tip>
+            <Tip palette="warning">Эта секция в разработке.</Tip>
             {typeof data === "undefined" && <Preloader type="spinner" />}
             {data && (
                 <>
@@ -111,7 +111,7 @@ export default function InviteBot() {
                     </BotInfo>
                     <Option>
                         <Category>
-                            Add this bot to your Revolt server, group
+                            Добавьте этого бота на Ваш сервер или в группу
                         </Category>
                         <div className="select-container">
                             <ComboBox
@@ -120,9 +120,9 @@ export default function InviteBot() {
                                 onChange={(e) =>
                                     setSelectedOption(e.currentTarget.value)
                                 }>
-                                <option value="">Select an option</option>
-                                <option value="server">Server</option>
-                                <option value="group">Group</option>
+                                <option value="">Выберите вариант</option>
+                                <option value="server">Сервер</option>
+                                <option value="group">Группа</option>
                             </ComboBox>
                             {selectedOption === "server" && (
                                 <div className="select-container">
@@ -133,7 +133,7 @@ export default function InviteBot() {
                                             setServer(e.currentTarget.value)
                                         }>
                                         <option value="none">
-                                            Select a server
+                                            Выберите сервер
                                         </option>
                                         {[...client.servers.values()]
                                             .filter((x) =>
@@ -159,7 +159,7 @@ export default function InviteBot() {
                                             setGroup(e.currentTarget.value)
                                         }>
                                         <option value="none">
-                                            Select a group
+                                            Выберите группу
                                         </option>
                                         {[...client.channels.values()]
                                             .filter(
@@ -177,7 +177,7 @@ export default function InviteBot() {
                                 </div>
                             )}
                             <Button palette="secondary" onClick={handleAdd}>
-                                Add Bot
+                                Добавить бота
                             </Button>
                         </div>
                     </Option>
