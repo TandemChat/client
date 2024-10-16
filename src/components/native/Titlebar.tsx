@@ -99,7 +99,7 @@ export function Titlebar(props: Props) {
     return (
         <TitlebarBase {...props}>
             <div className="title">
-                <svg
+                {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 193.733 37.438">
                     <path
@@ -109,12 +109,16 @@ export function Titlebar(props: Props) {
                         stroke="var(--titlebar-logo-color)"
                         stroke-width="1"
                     />
-                </svg>
+                </svg> */}
+                <svg width="50pt" viewBox="10 13 221 43" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1.586 11.18)"
+                        fill="var(--titlebar-logo-color)"
+                        stroke="var(--titlebar-logo-color)"
+                        stroke-width="1"><path d="M 79.688 42.188 L 70.313 42.188 L 70.313 9.375 L 93.75 9.375 L 93.75 14.063 L 98.438 14.063 L 98.438 42.188 L 89.063 42.188 L 89.063 14.063 L 79.688 14.063 L 79.688 42.188 Z M 60.938 42.188 L 37.5 42.188 L 37.5 37.5 L 32.813 37.5 L 32.813 28.125 L 37.5 28.125 L 37.5 23.438 L 51.563 23.438 L 51.563 14.063 L 42.188 14.063 L 42.188 18.75 L 32.813 18.75 L 32.813 14.063 L 37.5 14.063 L 37.5 9.375 L 56.25 9.375 L 56.25 14.063 L 60.938 14.063 L 60.938 42.188 Z M 168.75 42.188 L 150 42.188 L 150 37.5 L 145.313 37.5 L 145.313 14.063 L 150 14.063 L 150 9.375 L 168.75 9.375 L 168.75 14.063 L 173.438 14.063 L 173.438 28.125 L 154.688 28.125 L 154.688 37.5 L 164.063 37.5 L 164.063 32.813 L 173.438 32.813 L 173.438 37.5 L 168.75 37.5 L 168.75 42.188 Z M 192.188 42.188 L 182.813 42.188 L 182.813 9.375 L 201.563 9.375 L 201.563 14.063 L 206.25 14.063 L 206.25 42.188 L 196.875 42.188 L 196.875 14.063 L 192.188 14.063 L 192.188 42.188 Z M 23.438 42.188 L 9.375 42.188 L 9.375 37.5 L 4.688 37.5 L 4.688 14.063 L 0 14.063 L 0 9.375 L 4.688 9.375 L 4.688 0 L 14.063 0 L 14.063 9.375 L 23.438 9.375 L 23.438 14.063 L 14.063 14.063 L 14.063 37.5 L 23.438 37.5 L 23.438 42.188 Z M 135.938 42.188 L 112.5 42.188 L 112.5 37.5 L 107.813 37.5 L 107.813 14.063 L 112.5 14.063 L 112.5 9.375 L 126.563 9.375 L 126.563 0 L 135.938 0 L 135.938 42.188 Z M 206.25 14.063 L 210.938 14.063 L 210.938 42.188 L 220.313 42.188 L 220.313 14.063 L 215.625 14.063 L 215.625 9.375 L 206.25 9.375 L 206.25 14.063 Z M 117.188 37.5 L 126.563 37.5 L 126.563 14.063 L 117.188 14.063 L 117.188 37.5 Z M 42.188 37.5 L 51.563 37.5 L 51.563 28.125 L 42.188 28.125 L 42.188 37.5 Z M 154.688 23.438 L 164.063 23.438 L 164.063 14.063 L 154.688 14.063 L 154.688 23.438 Z" vector-effect="non-scaling-stroke"/></g></svg>
                 {window.native.getConfig().build === "dev" && (
                     <Wrench size="12.5" />
                 )}
             </div>
-            {/*<div className="actions quick">
+            {/* <div className="actions quick">
                 <Tooltip
                     content="Mute"
                     placement="bottom">
@@ -129,7 +133,7 @@ export function Titlebar(props: Props) {
                         <VolumeFull size={15}/>
                     </div>
                 </Tooltip>
-            </div>*/}
+            </div> */}
             <div className="drag" />
             <UpdateIndicator style="titlebar" />
             <div className="actions">

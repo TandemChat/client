@@ -24,8 +24,8 @@ export function Native() {
 
     return (
         <div style={{ marginTop: "10px" }}>
-            <Tip>Some options might require a restart.</Tip>
-            <h3>App Behavior</h3>
+            <Tip>Некоторые опции могут потребовать перезапуска.</Tip>
+            <h3>Поведение приложения</h3>
             <Checkbox
                 value={autoStart ?? false}
                 disabled={typeof autoStart === "undefined"}
@@ -38,8 +38,8 @@ export function Native() {
 
                     setAutoStart(v);
                 }}
-                title="Start with computer"
-                description="Launch Revolt when you log into your computer."
+                title="Автозапуск"
+                description="Автозапуск Tandem при запуске ПК."
             />
 
             <Checkbox
@@ -51,8 +51,8 @@ export function Native() {
                         minimiseToTray,
                     });
                 }}
-                title="Minimise to Tray"
-                description="Instead of closing, Revolt will hide in your tray."
+                title="Спрятать в трей"
+                description="Вместо закрытия, Tandem спрячется в трей."
             />
             <Checkbox
                 value={config.discordRPC}
@@ -63,8 +63,8 @@ export function Native() {
                         discordRPC,
                     });
                 }}
-                title="Enable Discord status"
-                description="Rep Revolt on your Discord status."
+                title="Включить статус Discord"
+                description="Отображает Tandem как статус Discord."
             />
             {/* <Checkbox
                 value={config.build === "nightly"}
@@ -81,7 +81,7 @@ export function Native() {
                 description="Use the beta branch of Revolt."
             /> */}
 
-            <h3>Titlebar</h3>
+            <h3>Заголовок окна</h3>
             <Checkbox
                 value={!config.frame}
                 onChange={(frame) => {
@@ -92,10 +92,10 @@ export function Native() {
                         frame: !frame,
                     });
                 }}
-                title="Custom window frame"
-                description="Let Revolt use its own window frame."
+                title="Кастомный заголовок окна"
+                description="Позволяет Tandem использовать свой заголовок окна."
             />
-            <Checkbox //FIXME: In Titlebar.tsx, enable .quick css
+            {/* <Checkbox //FIXME: In Titlebar.tsx, enable .quick css
                 disabled={true}
                 value={!config.frame}
                 onChange={(frame) => {
@@ -106,10 +106,10 @@ export function Native() {
                         frame: !frame,
                     });
                 }}
-                title="Enable quick action buttons"
-                description="Show mute/deafen buttons on the titlebar."
-            />
-            <h3>Advanced</h3>
+                title="Включить кнопки быстрых действий"
+                description="Показывать кнопки мут/заглушить в заголовке окна."
+            /> */}
+            <h3>Продвинутые</h3>
             <Checkbox
                 value={config.hardwareAcceleration}
                 onChange={async (hardwareAcceleration) => {
@@ -123,8 +123,8 @@ export function Native() {
                         hardwareAcceleration,
                     });
                 }}
-                title="Hardware Acceleration"
-                description="Uses your GPU to render the app, disable if you run into visual issues."
+                title="Аппаратное ускорение"
+                description="Использует GPU для рендера приложения, отключите, если вы стокнулись с визуальными проблемами."
             />
 
             <p style={{ display: "flex", gap: "8px" }}>
@@ -133,18 +133,18 @@ export function Native() {
                     compact
                     disabled={!hintReload}
                     onClick={window.native.reload}>
-                    Reload Page
+                    Перезагрузить страницу
                 </Button>
                 <Button
                     palette="secondary"
                     compact
                     disabled={!hintRelaunch}
                     onClick={window.native.relaunch}>
-                    Reload App
+                    Перезагрузить приложение
                 </Button>
-            </p>
+            </p>{/*
             <h3 style={{ marginTop: "4em" }}>Local Development Mode</h3>
-            {/*config.build === "dev" ? (
+            config.build === "dev" ? (
                 <>
                     <h5>Development mode is currently on.</h5>
                     <Button
@@ -200,10 +200,10 @@ export function Native() {
             )*/}
             <hr />
             <CategoryButton
-                icon={<img src={RLogo} draggable={false} />}
-                description={<span>version {window.nativeVersion}</span>}
+                // icon={<img src={RLogo} draggable={false} />}
+                description={<span>версия {window.nativeVersion}</span>}
                 action={<Refresh size={24} />}>
-                Revolt for Desktop
+                Tandem for Desktop
             </CategoryButton>
         </div>
     );
