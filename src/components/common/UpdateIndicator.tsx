@@ -33,7 +33,7 @@ export default function UpdateIndicator({ style }: Props) {
         return (
             <div className="actions">
                 <Tooltip
-                    content="A new update is available!"
+                    content="Доступно обновление!"
                     placement="bottom">
                     <div onClick={() => updateSW(true)}>
                         <CloudDownload
