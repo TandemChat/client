@@ -35,7 +35,7 @@ export default function ServerInfo({
                         });
                         return true;
                     },
-                    children: "Edit Identity",
+                    children: "Редактировать профиль",
                     palette: "primary",
                 },
                 {
@@ -46,7 +46,7 @@ export default function ServerInfo({
                         });
                         return true;
                     },
-                    children: "Leave Server",
+                    children: "Покинуть сервер",
                     palette: "error",
                 },
                 {
