@@ -271,8 +271,8 @@ export default observer(() => {
                         <ListUl size={20} />
                         <Text id="app.special.modals.changelogs.title" />
                     </ButtonItem>
-                    {/* <a
-                        href="https://github.com/revoltchat"
+                    <a
+                        href="https://github.com/TandemChat"
                         target="_blank"
                         rel="noreferrer">
                         <ButtonItem compact>
@@ -281,14 +281,14 @@ export default observer(() => {
                         </ButtonItem>
                     </a>
                     <a
-                        href="https://insrt.uk/donate"
+                        href="https://tandemchat.ru/donate"
                         target="_blank"
                         rel="noreferrer">
                         <ButtonItem className={styles.donate} compact>
                             <Coffee size={20} />
                             <Text id="app.settings.pages.donate.title" />
                         </ButtonItem>
-                    </a> */}
+                    </a>
                     <LineDivider compact />
                     <ButtonItem
                         onClick={clientController.logoutCurrent}
@@ -361,7 +361,7 @@ export default observer(() => {
                                     type: "custom_status",
                                 })
                             }>
-                            Change your status...
+                            Изменить статус...
                         </a>
                         {client.user!.status?.text && (
                             <Trash
